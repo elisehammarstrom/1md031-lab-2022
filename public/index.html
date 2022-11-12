@@ -1,30 +1,118 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="mystyle.css">
+  <title>BurgerHeaven</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+   <div>
+      <header class="burger-header">
+         <img src="burger_restaurant.jpg">
+         <h1 id="siteintro">Welcome to BurgerHeaven Online</h1>
+      </header>
+      <!-- <nav>Menu-bar</nav> -->
+      <main>
+         <section id="select-burger-section">
+            <h2>Select burger </h2>
+            <p>This is where you execute burger selection<p>
+               <section>
+                  <div class="wrapper">
+                     <div class="burger-box">
+                        <h2>The Fire Burger</h2>
+                        <img src="fire-meat-burger-wooden-hemp_140725-7009.webp" alt="Span" title="Fire Burger Image">
+                        <br />
+                        <div class="ingredients">
+                           <ul>
+                              <li id="vegan-friendly-fire-burger">Can be made vegan friendly</li>
+                              <li id="ingredient">Can be made with glutenfree bread</li>
+                           </ul> 
+                        </div>
+                     </div>  
+                     <div class="burger-box">
+                        <h2>The Vegan Burger</h2>
+                        <img src="vegan_burger.jpg" alt="Span" title="Fire Burger Image">
+                        <br />
+                        <div class="ingredients">
+                           <ul>
+                              <li>Can be made with glutenfree bread</li>
+                           </ul>
+                        </div>  
+                     </div>  
+                     <div class="burger-box">
+                        <h2>The Lettuce Wrapped Burger</h2>
+                        <img src="lettuce-wrapped-burger.jpg" alt="Span" title="Fire Burger Image">
+                        <br />
+                        <div class="ingredients">
+                           <ul>
+                              <li>Can be made with eco-certified lettuce</li>
+                           </ul> 
+                        </div>   
+                     </div> 
+                  </div>    
+               </section>
+            </section>
+            <section id="place-order-section">
+               <h2>Customer information</h2>
+               <p>This is where you provide necessary information </p>
+               <section id="contact">
+                 <form>
+                  <p>
+                    <label for="fullname">Full name</label><br>
+                    <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+                 </p>
+                 <p>
+                  <label for="email">Email</label><br>
+                  <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+               </p>
+               <p>
+                 <label for="street">Street</label><br>
+                 <input type="text" id="street" name="st" placeholder="Street name">
+              </p>
+              <p>
+                 <label for="house">House</label><br> 
+                 <input type="number" id="house" name="hs" placeholder="House number">
+              </p>
+              <div class="radiobuttons">
+               <div class="singleRadioButton">
+                <input type="radio" id="woman" value="Woman">
+                <label for="woman">Woman</label>
+             </div>
+             <div class="singleRadioButton">
+                <input type="radio" id="man" value="Man">
+                <label for="Man">Man</label>
+             </div>
+             <div class="singleRadioButton">
+                <input type="radio" id="non-binary" value="Do not wish to provide"
+                checked>
+                <label for="non-binary">Do not wish to provide</label>
+             </div>
+          </div>
+       </form>
+       <br>
+       <p>
+        <label for="paymentmethod" id="choose-paymentmethod-label">Choose your payment method:</label><be>
+         <br />
+         <select id="paymentmethod" name="pm">
+          <option>Card</option>
+          <option>Swish</option>
+          <option>Banktransfer</option>
+          <option selected="selected">Burger Heaven Customer Points</option>
+          <option>Credit</option>
+       </select>
+    </p>
+    <button id="place-order-button" type="submit" value="Place order">
+      <img src="hamburger.png" width="20px">
+      <br>
+      Place order
+   </button>
 
-<h1>Polling programme</h1>
-<h2>Prototype</h2>
-
-
-<div class="container"
-	<p id="startquiz">Start the Poll:</p>
-</div>
-
-
-<div class="flex-container">
-  <div class="item">
-  	<button type="button">First Button </button>
-  </div>
-  <div class="item">
-  	<button type="button">2nd Button </button>
-  </div>
-  <div class="item">
-  	<button type="button">3rd Button </button>
-  </div>
-</div>
-
+</section>
+</section>
+</main>
+<hr>
+<footer>
+   <p> &copy; BurgerHeaven Limited 2022</p>
+</footer>
 </body>
 </html>
