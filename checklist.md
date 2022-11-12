@@ -2,6 +2,14 @@
 
 Before you submit the final version of your labs, make sure that your project fullfills all of the tasks that will be added to this checklist.
 
+## Other
+My color palette:
+Middle Blue Green: #9AD2CB
+Tea Green: #D7EBBA
+Dark Salmon: #E9967A
+Pastel Yellow: #FEFFBE
+Dark plum: #472836
+
 ## 00 Introduction
 
 - [x] Install an IDE on your system
