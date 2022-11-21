@@ -55,7 +55,7 @@ Data.prototype.addOrder = function (order) {
 };
 
 Data.prototype.getAllOrders = function () {
-  return this.orders;
+  return this.orders; 
 };
 
 let data = new Data();
@@ -64,6 +64,11 @@ io.on('connection', function (socket) {
 
   // Send list of orders when a client connects
   socket.emit('currentQueue', { orders: data.getAllOrders() });
+
+  //skriven 
+  socket.on("deliveryTime", function() {
+    socket.emit("deliveryTimeIs", Object.keys(data.getAllOrders()).length * 5 ) //as it takes 5 minute per order
+  }); 
 
   // When a connected client emits an "addOrder" message
   socket.on('addOrder', function (order) {

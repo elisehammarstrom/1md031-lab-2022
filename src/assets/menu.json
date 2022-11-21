@@ -1,0 +1,28 @@
+[
+  {
+    "name" : "The Fire Burger",
+    "kCal": "700kCal", 
+    "url": "fire-meat-burger-wooden-hemp_140725-7009.webp", 
+    "vegan": "Vegan", 
+    "lactose": true,
+    "gluten": true
+  },
+
+    {
+    "name" : "The Vegan Burger",
+    "kCal": "900kCal", 
+    "url": "vegan_burger.jpg", 
+    "vegan": "Vegan", 
+    "lactose": true,
+    "gluten": false
+  },
+
+    {
+    "name" : "The Lettuce Wrapped Burger",
+    "kCal": "600kCal", 
+    "url": "lettuce-wrapped-burger.jpg", 
+    "vegan": "Vegan", 
+    "lactose": false,
+    "gluten": false
+  }
+]

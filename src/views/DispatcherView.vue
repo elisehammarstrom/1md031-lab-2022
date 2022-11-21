@@ -2,15 +2,27 @@
     <div id="orders">
       <div id="orderList">
         <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
+          #{{ key }}: <!-- {{ order.orderItems.join(", ") }} -->
+          <div v-for="(amount, name) in order.orderItems" v-bind:key="'key'+key+name">
+            Order: {{name}}. Amount: {{amount}}
+            <!-- <div v-for="(fullName, email, payment, gender) in order.customer" v-bind:key="'key'+key+name+fullName"> 
+              <div v-for= "(fullName, email, payment, gender) in order.customer.fullName" v-bind:key="'key'+key+name+fullName" v-bind:style="{color:'gray', font: '0.5em Arial, sans-serif;' }"> -->
+               <div v-bind:style="{color:'gray' }"> 
+              {{order.customer.fullName}}
+              ({{order.customer.email}}, {{order.customer.payment}}, {{order.customer.gender}})
+
+            </div>
+          </div>
         </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
       <div id="dots" v-bind:style="{ background: 'url(' + require('../../public/img/polacks.jpg')+ ')' }">
           <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
             {{ key }}
+
           </div>
       </div>
+      
     </div>
   </template>
   <script>
@@ -28,6 +40,7 @@
       socket.on('currentQueue', data =>
         this.orders = data.orders);
     },
+    
     methods: {
       clearQueue: function () {
         socket.emit('clearQueue');
